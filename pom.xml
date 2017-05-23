@@ -6,7 +6,24 @@
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
-    <groupId>com.sparkjava</groupId>
+    <!--
+        Forked from https://github.com/perwendel/spark
+        Waiting for pull request #853
+    -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>com.inrix.maven.snapshot</id>
+            <url>http://release/artifactory/libs-snapshot-local</url>
+            <name>com.inrix.maven.snapshot</name>
+        </snapshotRepository>
+        <repository>
+            <id>com.inrix.maven.release</id>
+            <url>http://release/artifactory/libs-release-local</url>
+            <name>com.inrix.maven.release</name>
+        </repository>
+    </distributionManagement>
+
+    <groupId>com.inrix</groupId>
     <artifactId>spark-core</artifactId>
     <packaging>bundle</packaging>
     <version>2.6.2-SNAPSHOT</version>
